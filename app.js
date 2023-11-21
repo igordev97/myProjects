@@ -11,6 +11,8 @@ for (let field of fields) {
   field.addEventListener('click', function (e) {
     if (!isWinner) {
       e.target.textContent = currentPlay;
+      const click = new Audio('./click.wav');
+      click.play();
       gameData[field.id] = currentPlay;
       checkWinner(gameData);
       console.log(gameData);
@@ -22,6 +24,8 @@ for (let field of fields) {
         document.querySelector('#display').textContent = 'Draw';
         document.querySelector('.draw').textContent = draw_score;
         isWinner = true;
+        const draw = new Audio('./draw.mp3');
+        draw.play();
       }
     }
   });
@@ -42,6 +46,8 @@ function checkWinner(data) {
     score_player_x++;
     document.querySelector('.x-score').textContent = score_player_x;
     isWinner = true;
+    const win = new Audio('./win.wav');
+    win.play();
   } else if (
     (data[0] == 'o' && data[1] == 'o' && data[2] == 'o') ||
     (data[3] == 'o' && data[4] == 'o' && data[5] == 'o') ||
@@ -56,6 +62,8 @@ function checkWinner(data) {
     isWinner = true;
     score_player_o++;
     document.querySelector('.o-score').textContent = score_player_o;
+    const win = new Audio('./win.wav');
+    win.play();
   } else {
     return;
   }
@@ -70,5 +78,7 @@ function newGame() {
     document.querySelector('#display').textContent = 'Play Now';
     turnStep = 0;
     field.textContent = '';
+    const reset = new Audio('./reset.wav');
+    reset.play();
   }
 }

@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -122,4 +123,33 @@ main table tr td {
   bottom: 0;
   left: 10%;
   transform: translateY(50%);
+}
+
+@media screen and (max-width: 600px) {
+  main table tr td {
+    width: 10rem;
+    height: 10rem;
+    font-size: 5rem;
+  }
+  .score {
+    font-size: 1.3rem;
+  }
+  #draw {
+    top: 20%;
+  }
+
+  #display {
+    padding: 0.5rem 1rem;
+  }
+
+  #play {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #9fcc2e;
+    color: #fff;
+    font-size: 1.8rem;
+    left: 50%;
+    transform: translate(-50%, 200%);
+  }
 }
