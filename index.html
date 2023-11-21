@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Tou Game</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <header>
+      <p id="x-score" class="score">
+        Player -X- Score 🏆 - <span class="x-score"></span>
+      </p>
+      <p id="o-score" class="score">
+        Player -O- Score 🏆- <span class="o-score"></span>
+      </p>
+
+      <p id="draw" class="score">DRAW 💯- <span class="draw"></span></p>
+      <h1>Tic-Tac-Toe</h1>
+      <div id="display">Play Now</div>
+      <button id="play">New Game 🔃</button>
+    </header>
+
+    <main>
+      <table>
+        <tr>
+          <td id="0" class="box box--0"></td>
+          <td id="1" class="box box--1"></td>
+          <td id="2" class="box box--2"></td>
+        </tr>
+        <tr>
+          <td id="3" class="box box--3"></td>
+          <td id="4" class="box box--4"></td>
+          <td id="5" class="box box--5"></td>
+        </tr>
+        <tr>
+          <td id="6" class="box box--6"></td>
+          <td id="7" class="box box--7"></td>
+          <td id="8" class="box box--8"></td>
+        </tr>
+      </table>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
